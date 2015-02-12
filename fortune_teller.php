@@ -3,6 +3,8 @@ $user_birthmonth = $_GET["user_birthmonth"];
 $user_favorite_color = $_GET["user_favorite_color"];
 $current_temperature = $_GET["temperature"];
 
+$message = tellBirthFortune($user_birthmonth) . tellColorFortune($user_favorite_color) . tellTemperature($current_temperature);
+
 function tellBirthFortune($birthday_month)
   {
     if ($birthday_month < 5) {
