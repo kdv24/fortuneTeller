@@ -3,7 +3,7 @@ $user_birthmonth = $_GET["user_birthmonth"];
 $user_favorite_color = $_GET["user_favorite_color"];
 $current_temperature = $_GET["temperature"];
 
-function tellFortune($birthday_month, $favorite_color)
+function tellBirthFortune($birthday_month)
   {
     if ($birthday_month < 5) {
       //say this
@@ -16,6 +16,21 @@ function tellFortune($birthday_month, $favorite_color)
     }
   }
 
+function tellColorFortune($favorite_color)
+  {
+    if ($favorite_color == red || $favorite_color = blue || $favorite_color = red) {
+      //say something about primary colors
+    }
+    elseif ($favorite_color == black || $favorite_color ==brown) {
+      //say something dark
+    }
+    elseif ($favorite_color == white) {
+      //say something about clean
+    }
+    elseif ($favorite_color == orange || $favorite_color == purple) {
+      //say something about non-conforming
+    }
+  }
 
 function tellTemperature($temperature)
   {
