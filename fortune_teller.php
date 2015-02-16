@@ -1,5 +1,5 @@
 <?php
-$user_birthmonth = $_GET["user_birthmonth"];
+$user_birthmonth = $_GET["user_birthmonth"]
 $user_favorite_color = $_GET["user_favorite_color"];
 $current_temperature = $_GET["temperature"];
 
