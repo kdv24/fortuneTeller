@@ -1,9 +1,9 @@
 <?php
-$user_birthmonth = $_GET["user_birthmonth"]
+$user_birthmonth = $_GET["user_birthmonth"];
 $user_favorite_color = $_GET["user_favorite_color"];
 $current_temperature = $_GET["temperature"];
 
-$message = tellBirthFortune($user_birthmonth) . " " . tellColorFortune($user_favorite_color);
+$message = tellBirthFortune($user_birthmonth) . " " . tellColorFortune($user_favorite_color) . " " . tellTemperature($current_temperature);
 
 
 
@@ -22,20 +22,20 @@ function tellBirthFortune($birthday_month)
 
 function tellColorFortune($favorite_color)
   {
-    if ($favorite_color == red || $favorite_color = blue || $favorite_color = red) {
+    if (($favorite_color == red) || ($favorite_color == blue) || ($favorite_color == yellow)) {
       return "Your color choice tells me you are a bold decision maker.";
     }
-    elseif ($favorite_color == black || $favorite_color ==brown) {
+    elseif (($favorite_color == brown) || ($favorite_color == black)) {
       return "You are a deep thinker.";
     }
     elseif ($favorite_color == white) {
       return "The details matter to you.";
     }
-    elseif ($favorite_color == orange || $favorite_color == purple) {
-      return "You like to be unique in a crowd."''
+    elseif (($favorite_color == orange) || ($favorite_color == purple)) {
+      return "You like to be unique in a crowd.";
     }
     else {
-      return "Hmmmm, that's interesting.";
+      return "You are interesting.";
     }
   }
 
@@ -56,9 +56,10 @@ function tellTemperature($temperature)
 <!DOCTYPE html>
 <html>
 <head>
-  <body>
-    <?php echo $message; ?>
-  </body>
+  <title>Your fortune</title>
 </head>
+  <body>
+    <p><?php echo $message; ?></p>
+  </body>
 </html>
 
